@@ -1,0 +1,376 @@
+/* for most of the css 'I' researched online and tried to adjust and fit in my vision.*/
+/*changing background color of whole site*/
+body{
+background-color: darkmagenta
+
+
+}
+/* the horizontal line below heading/header I wanted it to look cool*/
+.headinghr{
+
+    height:12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px darkorchid;
+    margin-left:30%;
+    margin-right:30%;
+
+}
+/* In info box I displayed my basic information, so I adjusted all of that to look nice*/
+#info-box {
+    margin-left:47%;
+    margin-right:3%;
+    display:block;
+    transition: left 250ms ease-in-out, right 250ms ease-in-out;
+  }
+  
+#info-box ~ span:after {
+
+    left: 10px;
+    content: '';
+    height: 40px;
+    width: 275px;
+    border-left: solid 3px #019fb6;
+    transition: left 250ms ease-in-out, right 250ms ease-in-out;
+    opacity: 0;
+  }
+  
+#info-box:hover:after {
+    opacity: 1;
+  }
+/* in below classes I handled how my profile picture is displayed ,thus adding on hover effects */
+.profil.container {
+        position: relative;
+        width: 50%;
+        max-width: 571.78px;
+        float: left;
+      }
+.profil.image {
+        display: block;
+        width: auto;
+        height: 380px;
+      }
+      
+.profil.overlay {
+        position: absolute; 
+        bottom: 0; 
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: #f1f1f1; 
+        width: 93%;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+      }      
+.profil.container:hover .overlay {
+        opacity: 1;
+      }
+/* text of heading on the top of the page, not classic header but serves the same role*/
+h3{
+    text-align: center;
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: normal;    
+	font-family: 'Hammersmith One', sans-serif;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+	position: relative;
+	color: #6Cf;
+}
+/* sections are divs in which I separated slides for my project to be presented, I used jQuery to hide and
+ show different sections*/
+#section1{
+background-color: rgba(139, 0, 139,0.7);
+height:100%;
+
+
+display:block;
+}
+#section2{
+    background-color: rgba(139, 0, 139,0.7);
+    height:100%;
+    display:none;
+    }
+#section3{
+    background-color: rgba(139, 0, 139,0.7);
+    height:100%;
+    display:none;
+        }
+#section4{
+    background-color: rgba(139, 0, 139,0.7);
+    height:100%;
+    display:none;
+            } 
+            /* css for making the buttons or arrows photos which are used for a button look nice and be intiuitative */        
+.sliderbuttonright{
+margin-top: 25%;
+height: 64px;
+width: 64px;
+float:right;
+position:relative;
+}
+.sliderbuttonright:hover{
+    filter: brightness(50%);
+    }
+.sliderbuttonleft{
+        margin-top: 25%;
+        height: 64px;
+        width: 64px;
+        float:left;
+        position: relative;
+        
+        }
+.sliderbuttonleft:hover{
+        
+    filter: brightness(50%);
+         }
+         /* I found this on w3c as well and adjusted it because it fit how I wanted to display section entries
+         collapsible is a button while content is hideable div that is shown or hidden on click*/
+.collapsible {
+        background-color:bisque;
+        cursor: pointer;
+        padding: 18px;
+        width: 93%;
+        border: none;
+        text-align: center;
+        outline: none;  
+        font-size: 24px;
+        line-height: 40px;
+        font-weight: normal;    
+        font-family: 'Hammersmith One', sans-serif;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+        position: relative;
+        color:rebeccapurple;
+         }
+            
+.active, .collapsible:hover {
+background-color:powderblue;
+        }
+            
+.content {
+    padding: 0 17px;
+    width:88%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgba(248, 187, 248, 0.884);
+    margin-right:5px;
+        }
+        /* css for displaying personal information table*/
+.leftOne{
+border-left: 4px solid salmon;
+padding-right:4px;
+text-align:right; 
+}
+.leftTwo{
+padding-left:4px;
+text-align: left;
+padding-right:10px;
+}
+.rightOne{
+border-left: 4px solid salmon; 
+padding-right:4px;
+text-align:right; 
+}
+.rightTwo
+{
+    text-align: left;
+    padding-left:4px;
+}/*css for buttons and contents for education section*/
+#edu-box{
+    display: block;
+    background-color: darkgrey;
+    margin-left:6%;
+    margin-right:6%;
+    height:auto;
+}
+#edu-box .collapsible {
+    background-color:bisque;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;  
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: normal;    
+    font-family: 'Hammersmith One', sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    position: relative;
+    color:rebeccapurple;
+     }
+        
+     #edu-box .active, #edu-box .collapsible:hover {
+background-color:powderblue;
+    }
+        
+    #edu-box .content {
+padding: 0 10px;
+width:98.4%;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+background-color: rgba(255,0,255,0.3);
+margin-right:5px;
+    }
+    #edu-box table{
+        padding-top:10px;
+        display: block;
+        margin-left:15%;
+
+
+    }
+    #edu-box td{
+
+        font-size: 1.2em;
+
+    }
+    /* css for buttons and contents in work experience section,
+     I know they do look alike but I tried at least to show information inside contents differently.*/
+#work-box{
+    display: block;
+    background-color: darkgrey;
+    margin-left:6%;
+    margin-right:6%;
+    height:auto;
+}
+#work-box .collapsible {
+    background-color:bisque;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;  
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: normal;    
+    font-family: 'Hammersmith One', sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    position: relative;
+    color:rebeccapurple;
+     }
+        
+ #work-box .active, #edu-box .collapsible:hover {
+background-color:powderblue;
+    }
+        
+#work-box .content {
+padding: 0 10px;
+width:98.4%;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+background-color: rgba(255,0,255,0.3);
+margin-right:5px;
+    }
+    /* hover star inside education section to display tooltip, thus I added some css to make it user friendly.*/
+.gpahov{
+    color:goldenrod;
+}
+.gpahov:hover{
+    color:whitesmoke;
+    cursor: help;
+}
+/* additional css for changing email link color on personal information*/ 
+.rightTwo a:link{
+    color:whitesmoke;
+}
+.rightTwo a:visited {
+color: orange;
+}
+.rightTwo a:hover{
+    color:greenyellow;
+} 
+.rightTwo a:active{
+    color:orangered;
+}
+/* css for logos in education section*/
+.logo-td{
+    padding:15px;
+    width: 180px;
+    height: 180px;
+    position: relative;
+}
+/*classes for divs how I separated logo and tables with informations*/
+.schoolLogo{
+    position: relative;
+    float: left;
+}
+.schoolTable{
+    margin-left:5%;
+    padding-top:20px;
+}
+/* more css for displaying table texts and trying to position them inside tables in education section*/
+.eduLeftRow{
+    text-align: left;
+    font-size: 24px;
+    width:50%;
+	font-weight: normal;    
+	font-family: 'Hammersmith One', sans-serif;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+	position: relative;
+	color: #6Cf;
+}
+.eduRightRow{
+    text-align: left;
+    font-size: 20px;
+	font-weight: normal;    
+	font-family: 'Hammersmith One', sans-serif;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+	position: relative;
+	color: #6Cf;
+}
+/* additional section css*/
+#addinfo-box{
+    display: block;
+    background-color: darkgrey;
+    margin-left:6%;
+    margin-right:6%;
+    height:auto;
+}
+#addinfo-box .collapsible {
+    background-color:bisque;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;  
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: normal;    
+    font-family: 'Hammersmith One', sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    position: relative;
+    color:rebeccapurple;
+     }
+        
+     #addinfo-box .active, #addinfo-box .collapsible:hover {
+background-color:powderblue;
+    }
+        
+#addinfo-box .content {
+padding: 0 10px;
+width:98.4%;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+background-color: rgba(255,0,255,0.3);
+margin-right:5px;
+    }
+    /* css for displaying photos a little bit differently and making them fit all three next to each other*/
+.photos{
+padding:1%;
+width:340px;
+height:340px;
+}
+#photoCycle{
+height:400px;
+}
+#photoJogg{
+height:400px;
+}
+

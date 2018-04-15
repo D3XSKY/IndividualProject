@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <!--simple references with jquery, js file and css file I'm going to use-->
+<link rel="stylesheet" href="first.css">
+<link rel="icon" href="img/favicon.png" type="image/x-icon" />
+<script src="jquery.min.js"></script>
+<script src="main.js"></script>
+<!--calling collapse function on load of the page because clicks on buttons required double click somehow -->
+<script type="text/javascript">
+ $(document).ready(function () {
+            Collapse();
+        });
+         </script>
+
+<title>Dejan Misic</title>
+</head>
+<body >
+        <!-- section 1 html, for the first page that is loaded -->
+<div id="section1">
+
+<h3>GENERAL INFORMATION</h3>
+    <hr class="headinghr">
+    <img class="sliderbuttonright" src="img/rightarrow.png" onclick="ChangeSectionToEdu();"  />
+    <div class="profil container">
+            <img src="img/profil.jpg" alt="Avatar" class="profil image" onmouseover="hover(this);" onmouseout="unhover(this);">
+            <div class="profil overlay">Dejan Misic</div>
+          </div>
+          <div id="info-box">
+                <button class="collapsible">PERSONAL PROFILE</button>
+                <div class="content">
+                  <table>
+                        <thead><tr><th colspan="4">Dejan Misic</th></tr></thead>
+                        <tbody>
+                                <tr>
+                                        <td class="leftOne">Age & Date of Birth:</td>
+                                        <td class="leftTwo">03. Aug. 1992</td>
+                                        <td class="rightOne">Address:</td>
+                                        <td class="rightTwo">Oslobodenja bb,75270 Zivinice  Bosnia and Herzegovina</td>
+
+                                </tr>
+                                <tr>
+                                        <td class="leftOne">Place of Birth:</td>
+                                        <td class="leftTwo">Beograd, Serbia</td>
+                                        <td class="rightOne">Mobile Phone:</td>
+                                        <td class="rightTwo">+ 387 62 015 831</td>
+                                </tr>
+                                <tr>
+                                        <td class="leftOne">Marital Status:</td>
+                                        <td class="leftTwo">Single</td>
+                                        <td class="rightOne">Home Phone:</td>
+                                        <td class="rightTwo">+ 387 35 773 869</td>
+                                </tr>
+                                <tr>
+                                         <td class="leftOne">Driving license:</td>
+                                         <td class="leftTwo">B</td>
+                                         <td class="rightOne">Email:</td>
+                                         <td class="rightTwo"><a href="mailto:dmisic@gmail.com?Subject=Contact%20Developer" target="_top">dmisic@gmail.com</a></td>
+                                </tr>
+                        </tbody>
+                        <tfoot>
+                                <tr><th colspan="4">Ambitious and energetic composed under pressure and get along very well with people at all levels.  Possess excellent correspondence & communication skills. Very organized with professional approach.</th></tr>
+                        </tfoot>
+                </table>
+                </div>
+                <button class="collapsible">OBJECTIVE</button>
+                <div class="content">
+                  <p>To secure a career in a reputed organization, which appreciates professional approach and hard work, where I can utilize my knowledge, various skills & experience in contribution towards fulfilling the company’s growth objectives, develop my career and excel in the related field. </p>
+                </div>
+                <button class="collapsible">SUMARRY OF EXPERIENCE</button>
+                <div class="content">
+                        <!-- using lists to display some information-->
+                  <ul style="list-style-type:square">
+                        <li>Highly motivated professional with proven history of strong relationship building and problem solving abilities.</li>
+                        <li>Good communication, writing and organization skills.</li>
+                        <li>Able to work for long periods, independently and under pressure also.</li>
+                        <li>Very motivated, quick learner with good communication skills and work ethics.</li>
+                        <li>Possess knowledge for using a variety of Microsoft software packages to produce correspondence and documents, and maintain presentations, spreadsheets and databases.</li>
+                        <li>Respect other coworkers and all safety and security rules.</li>
+                      </ul>               
+                </div>
+          </div>
+</div>
+<!-- html for section 2 where I displayed information about my education-->
+<div id="section2">
+    <h3>EDUCATION</h3>
+    <hr class="headinghr">
+    <!-- two images below are located in each section and they are acting as a buttons for nagivation-->
+    <img class="sliderbuttonleft" src="img/leftarrow.png" onclick="ChangeSectionToGen();" />
+    <img class="sliderbuttonright" src="img/rightarrow.png" onclick="ChangeSectionToExp();" />
+    <div id="edu-box">
+        <button class="collapsible">UNIVERSITY</button>
+        <div class="content">
+                <div class="schoolLogo">
+          <img class="logo-td" src="img/aubihlogo.png"></div>
+          <div class="schoolTable">
+          <table>
+                  <tr> 
+                          <td class="eduLeftRow">Bachelor of Science – Information Technology</td>
+                          <td class="eduRightRow">2015 - 2019<span class="gpahov" title="Expected year of graduation.">*</span></td>
+                  </tr>
+                  <tr>
+                          <td class="eduLeftRow">American University</td>
+                          <td class="eduRightRow">Sarajevo, Bosnia and Herzegovina</td>
+                  </tr>
+                  <tr><td class="eduRightRow" rowspan="4">GPA: 9.5 <span class="gpahov" title="GPA is calculated based on Bosnian Grades.">*</span></td></tr>
+        </table>
+        </div>  
+        </div>
+        <button class="collapsible">HIGH SCHOOL</button>
+        <div class="content">
+                        <div class="schoolLogo">
+                          <img class="logo-td" src="img/eltehnickalogo.png"></div>
+                          <div class="schoolTable">
+                        <table>
+                                        <tr>
+                                                <td class="eduLeftRow">Electrotechnical Energetics</td>
+                                                <td class="eduRightRow">2007 - 2011</td>
+                                        </tr>
+                                        <tr>
+                                                
+                                                <td class="eduLeftRow">Secondary School Zivinice</td>
+                                                <td class="eduRightRow">Zivinice, Bosnia and Herzegovina</td>
+                                        </tr>
+                                        <tr><td class="eduRightRow" colspan="2">GPA: 5.0 <span class="gpahov" title="GPA is calculated based on Bosnian Grades.">*</span></td></tr>
+                              </table></div>
+        </div>
+        <button class="collapsible">ELEMENTARY SCHOOL</button>
+        <div class="content">
+                        <div class="schoolLogo">
+                                        <img class="logo-td" src="img/drugsos.png"></div>
+                        <div class="schoolTable">
+                        <table>
+                                        <tr>
+                                                <td class="eduLeftRow">Primary Education</td>
+                                                <td class="eduRightRow">1999 - 2007</td>
+                                        </tr>
+                                        <tr>
+                                                <td class="eduLeftRow">Second Elementary School Zivinice</td>
+                                                <td class="eduRightRow">Zivinice, Bosnia and Herzegovina</td>
+                                        </tr>
+                                        <tr><td class="eduRightRow" rowspan="2">GPA: 5.0 <span class="gpahov" title="GPA is calculated based on Bosnian Grades.">*</span></td></tr>
+                              </table></div>
+        </div>
+
+
+    </div>
+</div>
+<!-- html for section 3 - where I displayed my work experience-->
+<div id="section3">
+        <h3>WORK EXPERIENCE</h3>
+        <hr class="headinghr">
+        <img class="sliderbuttonleft" src="img/leftarrow.png" onclick="ChangeSectionToEdu();" />
+        <img class="sliderbuttonright" src="img/rightarrow.png" onclick="ChangeSectionToAdd();" />
+        <div id="work-box">
+                <button class="collapsible">COMPUSIGHT</button>
+                <div class="content">
+                        <!--I tried to display work information differently so I just did plain text in simple paragraph-->
+                  <p>Current Employer          :  “Compusight”, QA Intern, Sarajevo, Bosnia and Herzegovina <br>
+                        Position   :  Quality Assurance                                     <br>
+                          Period of Service :  Oct 2017 till Present <br>
+                           Assignments: During this time his job position is Quality Assurance Intern.
+                          <br> Where his job duties will include but are not limited to: getting to know how services and service calls work,
+                          <br> manual service calling using Fiddler and Postman, fixing existing and writing new automated service-level tests by using C# and NUnit Test Framework.
+                        In addition to this he will be reporting bugs, perform validation of fixed bugs and if needed manually test UI. </p>
+                </div>
+                <button class="collapsible">BINGO DOO</button>
+                <div class="content">
+                  <p>Current Employer          :  “BINGO D.o.o.” Export-Import, Electrical maintenance, Zivinice, Bosnia and Herzegovina <br>
+                        Position   :  Electrical mechanic & Warehouseman                                        <br>
+                          Period of Service :  Aug 2012 till Oct 2014 <br>
+                           Assignments                   :  From February to October 2014 been involved in construction of new production farm and install new electrical equipment with related control devices to automate production process.<br>
+                            Install electrical equipment such as storage heaters, water heaters, electrical signs, switchboards and monitors. Connect switches, outlets and other fittings. <br>
+                             From August 2012 to February 2014 as a warehouseman been responsible on receiving, store, and issue materials and supplies, and receive purchased and completed items by verifying, stock number, labeling, and quantities of materials against documentation.<br>
+                               Record, issue and provide receipts of transactions in the Inventory Management data base. Place materials in assigned locations using best practices and proper material handling equipment. <br>
+                               Pull items from stock to fill requests for production and/or shipment.<br>
+                                Label and package materials, sub assemblies and final assemblies for shipment.  Perform cycle counts inventories including counting, investigating, and rectifying discrepancies.<br>
+                                 Maintain filing system for daily transaction documents.  Work with various internal and external customers on a daily bases.  Maintain neat and organized material storage and stockroom areas. <br>
+                                  Ensuring that each item is on designated location per computer database and complete monthly inspection with property personnel.<br>
+                                   Create daily reports with list of received/issued material and noting low stock items to enable on time reordering. 
+                                Secondary duties include, assisting with the daily physical cleanliness of the warehouse, and assisting with the collection of recyclable items. 
+                                 
+                                 </p>
+                </div>
+                <button class="collapsible">ECC INTERNATIONAL</button>
+                <div class="content">
+                  <p>Current Employer          :  “ECC INTERNATIONAL” Camp Hero (Kandahar) & Camp Sayar, Afghanistan <br>
+                         Position   :  K-SPAN Foreman                            <br>
+                                       ((Started as Foreman Assistant for two months, then promoted to Foreman position)) <br>
+                                       Period of Service :  Dec 2011 till May 2012 <br>
+                                        Assignments                   :  Supervise the work crew of eleven technicians and participate in the planning, laying out, construction, repair and assembly of buildings, additions, partitions and wood structures and fixtures in accordance with blueprints, sketches and verbal instructions.<br>
+                                         Responsible to organize work site, for proper tool usage, for implementation of accepted construction safety rules. Plan and schedule work for the group ensuring proper distribution of assignments and adequate manning, space and facilities for subsequent performance of duties. <br>
+                                         Inspect completed work to ensure compliance with blueprints, specifications. Involved in installation and assembling together prefabricated steel girders, pipe work and beams, which make up the framework buildings and structures.<br>Fit the steelwork together following plans drawn up by engineers, organize and overview lifting and guiding components into position with mobile cranes.<br>
+                                          Line up and level steelwork before securing it in place by bolting or welding methods. Work from mobile elevated work platforms to gain safe access to sections off the ground. <br>
+                                          Set up and operate fabricating machines to cut, bend, and straighten sheet metal, shape metal over anvils, blocks. Select gauges and types of sheet metal or non-metallic material, according to product specifications.<br>
+                                           Drill and punch holes in metal, for screws, bolts, and rivets. Fabricate or alter parts at construction sites, using shears, hammers, punches, and drills. All given task completed in safe and professional manner. </p>
+                </div>
+                <button class="collapsible">ALOPS</button>
+                <div class="content">
+                  <p>Current Employer :  “ALOPS” FOB Leatherneck, Afghanistan <br>
+                        Position   :  MIC UBM Operator, K-Span Technician, Sheet metal worker, <br>
+                        Period of Service :  Aug 2011 till Dec 2011  <br>
+                          Assignments                   :  Set up and operate MIC UBM equipment to fabricate metal elements for construction of metal buildings, read blueprints and other specifications to determine method of installation, work procedures, and material and tool requirements. <br>
+                          Fit and assemble structural frameworks from materials, such as angle iron, I-beams, and plate steel, using hand tools and welding equipment and following blueprint specifications.<br>
+                           Adjust the various machine-operating components, as adjustments for the thickness, the radius, and the curving machine. Install assemblies, such as flashing, pipes, tubes, heating and air conditioning ducts, furnace casings, rain gutters, and down spouts, in supportive frameworks. <br>
+                           Select gauges and types of sheet metal or non-metallic material, according to product specifications. Drill and punch holes in metal, for screws, bolts, and rivets. Fasten seams and joints together with welds, bolts, cement, rivets, solder, caulks, metal drive clips, and bonds in order to assemble components into products or to repair sheet metal items. <br>
+                           All given task completed in safe and professional manner. In absence of Safety Inspector (for two weeks), perform duties as Safety Control to inspect / collect data and to evaluate potential hazards of the work place to ensure safety regulations are in place. 
+                        </p>
+                </div>
+        
+        
+            </div>
+</div>
+<!-- section 4 is my additional information section -->
+<div id="section4">
+        <h3>ADDITIONAL INFORMATION</h3>
+        <hr class="headinghr">
+        <img class="sliderbuttonleft" src="img/leftarrow.png" onclick="ChangeSectionToExp();" />
+        <div id="addinfo-box">
+                        <button class="collapsible">PERSONAL STRENGTHS</button>
+                        <div class="content">
+                          <p>Friendly and easy going with people, keen observer, fast learner, able trainer & good listener. </p>
+                        </div>
+                        <button class="collapsible">HOBBIES</button>
+                        <div class="content">
+                          <p> <ul>
+                                  <li>Jogging</li>
+                                  <li>Soccer</li>
+                                  <li>Hiking</li>
+                                  <li>Camping</li>
+                                  <li>Fishing</li>
+                                  <li>Reading</li>
+                                  <li>Writing</li>
+                                  <li>Ex Red Cross & Civitas Volonteer</li>
+                                </ul>
+                        </p>
+                        </div>
+                        <button class="collapsible">PHOTOS</button>
+                        <div class="content">
+                                <!-- this is where I displayed photos-->
+                                <img src="img/camping.png" alt="Camping" class="photos">
+                                <img src="img/jogging.png" alt="Jogging" id="photoJogg" class="photos">
+                                <img src="img/cycling.png" alt="Cycling" id="photoCycle" class="photos">
+
+                        </div>
+                        <button class="collapsible">MORE</button>
+                        <div class="content">
+                          <p> I love playing games a lot and I used to play CS:GO, Tibia, CS 1.6, etc. I don't have so much time right now. I'm preoccupied learning programming and doing boring EPA assignments.<br>
+                        Fortunately, the end of academic year is closing in and I expect maybe the best summer I ever had. I forgot to mention that I spent one summer working in the USA in the Work Experience Section.<br>
+                That was an awesome experience. I was a lifeguard on a swimming pool. Most of the day you sit and burn on sun while you're watching old people swim and chill. <br>
+        After you finish your work, you gotta cycle back to your apartment and then eventually drink heavily with your room mates. Anyway, we did a lot of stupid stuff for the whole summer and I had the best birthday ever overthere. 
+In the end, this project was interesting and I enjoyed doing it and learned really much in the process. </p>
+                        </div>
+                
+                
+                    </div>
+</div>
+</body>
+
+
+
+
+</html>
